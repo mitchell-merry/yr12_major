@@ -1,0 +1,41 @@
+TODO:
+
+- [x] Fix "Remember Me" bug
+- Finish minor story
+  - Fix the bottom area
+- [x] Fix the ad
+- Update image uploading system
+  - [x] Really make it good
+  - [x] Implement for:
+    - [x] Stories
+      - [x] Thumbnails
+      - [x] Mini-thumbnails
+      - [x] Content frame
+    - [x] Profiles
+      - [x] Display
+      - [x] Uploading
+  - Error handling, somehow
+  - [x] Delete image functionality
+- Add error handling for submitting story
+- [x] Add a way to add genres
+- [x] Add pages:
+  - [x] About
+  - [x] Pending stories
+    - [x] Date thing!
+    - [x] The rest of the table lol
+  - [x] Preview stories
+- [x] Restyle submit story page
+  - [x] Fix the "Video Link" input
+  - [x] Put the name of the file in the choose file fields
+  - [x] Change title of page "news.com - Submit Story"
+- [x] "Remove Story" button
+- [x] Fix 404 bug (on home computer)
+- Story page
+  - [x] Properly center CF
+  - [x] Fix bug where nothing works
+  - [x] Fix date
+  - [x] Fix youtube videos not showing up properly
+  - [x] Fix CF border
+
+Perhaps:
+- [x] Add a view counter to stories

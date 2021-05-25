@@ -1,0 +1,117 @@
+email: localnewsresetpwd@gmail.com
+email password: KjQt9A6kzBzgTW9n
+recovery is school email
+
+google:
+947057293654-8g66bktbmq2thselvg54jctt18oaluj3.apps.googleusercontent.com
+6TAacODW9rkevHU-Ue-QgPcS
+
+src="http://localhost/news/imgs/avatar_temp.png
+
+INSERT INTO `stories` (`stories_id`, `stories_title`, `stories_subtitle`, `stories_auth_id`, `stories_content`, `stories_genre`, `stories_priority`, `stories_status`, `stories_cf`, `stories_cf_caption`, `stories_cf_type`, `stories_thumbnail`, `stories_minithumbnail`, `stories_views`, `stories_date`, `stories_sources`) VALUES (NULL, 'BBC broadcaster Danny Baker fired over tweet comparing royal baby to chimpanzee', 'Broadcaster Danny Baker has been fired from his role at the BBC over a now-deleted tweet comparing Meghan Markle and Prince Harry''s newborn son to a chimpanzee.', '2', 'The widely circulated post showed an image of a couple holding hands with a chimpanzee wearing a hat and coat, alongside the caption: "Royal Baby leaves hospital". The BBC Radio 5 Live broadcaster was accused of mocking the Duchess of Sussex''s African-American heritage, with Archie Harrison Mountbatten-Windsor, who was born on Monday and will be seventh in line to the throne, becoming the first bi-racial British-American royal. Following widespread criticism, Baker again took to Twitter in a bid to quell the controversy, apologising for the "gag" post. "Sincere apologies for the stupid unthinking gag pic earlier," he wrote. "Royal watching not my forte." Hours later, the 61-year-old confirmed he had been fired from BBC Radio 5 Live, in a call he described as "a masterclass of pompous faux-gravity". "[The call] took a tone that said I actually meant that ridiculous tweet and the BBC must uphold blah blah blah," he tweeted. "Literally threw me under the bus. Could hear the suits'' knees knocking." In a statement to BBC News, a spokesperson for the corporation said Baker''s tweet was "a serious error of judgement" that goes against "the values we as a station aim to embody". "Danny''s a brilliant broadcaster but will no longer be presenting a weekly show with us," they added. Since marrying into the royal family, Meghan Markle â€” whose mother Doria Ragland is African-American â€” has become a target of vicious online trolling, with the level of racist abuse so severe Kensington Palace was forced to set up new guidelines for its social media channels.', '12', '3', '1', '4', 'PHOTO: Danny Baker apologised for the tweet, which he said was not intended to have racial connotations. (BBC Radio 5 live)', '1', '5', '6', '10', '2019-05-10 09:08:53', '[{"link":"https://www.abc.net.au/news/2019-05-09/bbc-broadcaster-danny-baker-fired-over-royal-baby-chimp-tweet/11099140","name":"Original Story","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-05-09/danny-baker-1/11099170","name":"Image credit","credit":"ABC News"},{"link":"https://twitter.com/prodnose/status/1126419088765595648","name":"Tweet: "Danny Baker Fired"","credit":"@prodnose on Twitter"},{"link":"https://www.abc.net.au/news/2019-01-30/british-press-urges-end-to-abuse-of-duchesses-meghan-and-kate/10760822","name":"Meghan Markle "online trolling"","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-03-05/royals-appeal-for-kindness-after-trolling-of-meghan-markle/10870792","name":"Kensington Place social media protocols","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-05-02/meghan-markle-and-prince-harrys-baby-racism-fears-and-hope/10983122","name":"First bi-racial royal baby","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-05-08/meghan-markle-prince-harry-baby-archie/11089266","name":"Archie Harrison Mountbatten-Windsor","credit":"ABC News"}]')
+
+{"link":"https://www.abc.net.au/news/2019-05-09/danny-baker-1/11099170","name":"Image credit","credit":"ABC News"},{"link":"https://twitter.com/prodnose/status/1126419088765595648","name":"Tweet: "Danny Baker Fired"","credit":"@prodnose on Twitter"},{"link":"https://www.abc.net.au/news/2019-01-30/british-press-urges-end-to-abuse-of-duchesses-meghan-and-kate/10760822","name":"Meghan Markle "online trolling"","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-03-05/royals-appeal-for-kindness-after-trolling-of-meghan-markle/10870792","name":"Kensington Place social media protocols","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-05-02/meghan-markle-and-prince-harrys-baby-racism-fears-and-hope/10983122","name":"First bi-racial royal baby","credit":"ABC News"},{"link":"https://www.abc.net.au/news/2019-05-08/meghan-markle-prince-harry-baby-archie/11089266","name":"Archie Harrison Mountbatten-Windsor","credit":"ABC News"}]')
+
+users.id => users_id
+users.username => users_uid
+users.rank => users_rank_id
+users.firstname => users_first
+users.lastname => users_last
+users.email => users_email
+users.pfp_path => users_pfp
+users.bio => users_bio
+users.pwd => users_pwd
+users.salt => users_salt
+
+stories.id => stories_id
+stories.title => stories_title
+stories.subtitle => stories_subtitle
+stories.author_id => stories_auth_id
+stories.content => stories_content
+stories.genre => stories_genre
+stories.priority => stories_priority
+stories.image => stories_image
+stories.image_caption => stories_image_cap
+stories.date => stories_date
+stories.sources => stories_sources
+
+genres.id => genres_id
+genres.genre => genres_name
+
+ranks.id => ranks_id
+ranks.name => ranks_name
+ranks.colour => ranks_colour
+
+pwd_reset.id => pwdr_id
+pwd_reset.email => pwdr_email
+pwd_reset.selector => pwdr_selector
+pwd_reset.token => pwdr_token
+pwd_reset.expires => pwdr_expires
+
+SELECT *, users_first, users_last FROM stories
+JOIN users ON users.users_id = stories.stories_auth_id
+JOIN images AS i1 ON stories.stories_thumbnail = i1.images_id
+JOIN images AS i2 ON stories.stories_minithumbnail = i2.images_id
+
+$sql = "SELECT *, users_first, users_last FROM stories INNER JOIN users ON stories_auth_id = users_id ";
+
+CREATE ALL SIX TABLES:
+
+CREATE TABLE pwd_reset (
+	pwdr_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+    pwdr_email TEXT NOT NULL,
+    pwdr_selector TEXT NOT NULL,
+    pwdr_token LONGTEXT NOT NULL,
+    pwdr_expires TEXT NOT NULL
+);
+
+CREATE TABLE ranks (
+	ranks_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+    ranks_name TEXT NOT NULL,
+    ranks_colour TEXT NOT NULL
+);
+
+CREATE TABLE genres (
+	genres_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+    genres_genre TEXT NOT NULL
+);
+
+CREATE TABLE users (
+	users_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+    users_uid TEXT NOT NULL,
+    users_rank_id int(11) NOT NULL,
+    users_first TEXT NOT NULL,
+    users_last TEXT NOT NULL,
+    users_email TEXT NOT NULL,
+    users_pfp int(11) NOT NULL,
+    users_bio TEXT NOT NULL,
+    users_pwd LONGTEXT NOT NULL,
+    users_salt LONGTEXT NOT NULL
+);
+
+CREATE TABLE images (
+	images_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+  images_path TEXT NOT NULL
+);
+
+CREATE TABLE stories (
+	stories_id int(11) AUTO_INCREMENT not NULL PRIMARY KEY,
+    stories_title TEXT NOT NULL,
+    stories_subtitle TEXT NOT NULL,
+    stories_auth_id int(11) NOT NULL,
+    stories_content LONGTEXT NOT NULL,
+    stories_genre int(11) NOT NULL,
+    stories_priority int(11) NOT NULL,
+    stories_thumbnail int(11) NOT NULL,
+    stories_minithumbnail int(11) NOT NULL,
+    stories_cf TEXT NOT NULL,
+    stories_cf_type TEXT NOT NULL,
+    stories_cf_caption TEXT NOT NULL,
+    stories_date DATE NOT NULL,
+    stories_sources TEXT NOT NULL
+);
+
+INSERT INTO ranks (ranks_name, ranks_colour) VALUES ("Reader", "light");
+INSERT INTO ranks (ranks_name, ranks_colour) VALUES ("Journalist", "success");
+INSERT INTO ranks (ranks_name, ranks_colour) VALUES ("Editor", "primary");
+INSERT INTO ranks (ranks_name, ranks_colour) VALUES ("Administrator", "danger");
