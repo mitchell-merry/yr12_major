@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>news.com</title>
+	<title>afghbkijsghfkjsfhjksfd</title>
 	<meta charset="utf-8">
 	<meta name="description" content="Trustworthy news source!">
 
